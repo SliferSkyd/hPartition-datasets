@@ -1,0 +1,12 @@
+# IQ-TREE run artefacts -- regenerable, not data
+*.ckp.gz
+*.model.gz
+*.sitelh
+*.log
+*.iqtree
+*.treefile
+*.best_model.nex
+*.best_scheme
+*.best_scheme.nex
+*_stats.*
+*.partitions
