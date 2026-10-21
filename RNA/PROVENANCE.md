@@ -53,22 +53,3 @@ Three tiers, by how much of the dataset comes from the source publication.
   reconstruction, not their file. The 37-gene metazoan mitochondrial set is fixed by biology, so the
   gene content is not a choice we made; the alignment procedure is.
 
-### beetle — 52 taxa × 16,318 sites, 37 loci
-- **Study:** Timmermans MJTN et al. (2016). Genome Biology and Evolution 8:161.
-- **What is theirs:** the accessions in Table S1 (243 records).
-- **What is ours:** record filtering (175 have ≥12 of 13 protein-coding genes; 52 of those also have
-  both rRNA genes annotated) and the alignment. See `rerun_sim/results/beetle_pipeline.png`.
-- **Masking:** five gene copies translate with internal stop codons under genetic code 5 and are
-  masked to gaps — JX412852/cox1, JX412759/cox1, JX412798/cox1, JX412839/cox1, JX412729/nad5.
-  Recorded in `beetle/aln/beetle.masked.tsv`; unmasked alignment kept as `beetle.unmasked.fasta`.
-
-## Tier 3 — built entirely by us
-
-### plastome — 33 taxa × 84,209 sites, 110 loci
-- **No source publication.** Taxon set, gene set and alignment are all ours, assembled from annotated
-  ENA plastid genome records.
-- Four decisions are arbitrary and would need defending: the taxon selection, the `MIN_FRAC=0.8`
-  gene-presence threshold, skipping the trans-spliced `rps12`, and keeping only the first copy of each
-  inverted-repeat gene.
-- Validation performed: 0 internal stop codons across 2,483 plastid CDS; six known angiosperm clades
-  recovered (Poaceae, monocots, Fagales, Melastomataceae, Brassicaceae, Brassicales).
