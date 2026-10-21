@@ -4,26 +4,28 @@ Three tiers, by how much of the dataset comes from the source publication.
 
 ## Tier 1 — published and deposited; used as the authors released it
 
-### barkbeetles — 44 taxa × 2,083 sites, 9 charsets
+### barkbeetles — 44 taxa x 1,897 sites, 7 charsets
 - **Study:** Cognato AI, Vogler AP (2001). *Exploring data interaction and nucleotide alignment in a
-  multiple gene analysis of* Ips *(Coleoptera: Scolytinae).* Systematic Biology 50(6):758–780.
-- **Deposit:** Dryad `doi:10.5061/dryad.678`, local copy in
-  `hPartition/doi_10_5061_dryad_678__v20090630/`
-- **File used:** `Ips.poy.g2.nexus` (the POY gap-cost g2 alignment), NTAX=44 NCHAR=2083.
-  Verified: its nine CHARSETs are byte-identical to our `pf/aln/barkbeetles.genes.nex`.
-- **Genes:** 16S (1–525), EF1a (526–1314), COI (1315–2083), with codon-position charsets for both
-  coding genes. EF1a's codon charsets cover only 526–1136; the remaining 1137–1314 is the **intron**,
-  which has no reading frame.
-- **Note:** this is *not* the alignment used in the PartitionFinder tutorial. That one is a different
-  alignment of the same study — 1,897 sites, blocks ef1a 1–649 / COI 650–1415 / 16S 1416–1897, no
-  intron — distributed via `roblanf/BenchmarkAlignments/datasets/Cognato_2001/alignment.nex`. Ours is
-  the authors' own Dryad deposit.
+  multiple gene analysis of* Ips *(Coleoptera: Scolytinae).* Systematic Biology 50(6):758-780.
+- **Deposit:** the alignment set distributed with PartitionFinder,
+  `roblanf/BenchmarkAlignments/datasets/Cognato_2001/alignment.nex`; local copy in
+  `source/Cognato_2001.alignment.nex`.
+- **Blocks:** ef1a 1-649, COI 650-1415, 16S 1416-1897, with codon-position charsets for the two
+  coding genes.
+- **Note on the site count:** the distributed file has NCHAR=1897, while Table 1 of Lanfear et al.
+  (2012) reports 1,896 for this dataset. The discrepancy is in their materials; we use the file as
+  distributed.
+- **Not used:** the authors' own Dryad deposit `doi:10.5061/dryad.678`
+  (`Ips.poy.g2.nexus`, NCHAR=2083, blocks 16s 1-525 / EF1a 526-1314 / COI 1315-2083) is a different
+  alignment of the same study. A local copy is in `hPartition/doi_10_5061_dryad_678__v20090630/`.
 
-### saxifragales — 40 taxa × 9,006 sites, 5 charsets
-- **Study:** Fishbein M et al. (2001). Systematic Biology 50:817–847.
-- **Deposit:** Dryad `doi:10.5061/dryad.684`.
-- **Genes:** atpB, 18S, rbcL, matK, 26S. These five CHARSETs span 9,006 of the file's 9,237 columns,
-  which is the subset PartitionFinder Table 1 reports; only those columns are kept.
+### saxifragales - 40 taxa x 9,005 sites, 5 charsets
+- **Study:** Fishbein M et al. (2001). Systematic Biology 50:817-847.
+- **Deposit:** the alignment set distributed with PartitionFinder,
+  `roblanf/BenchmarkAlignments/datasets/Fishbein_2001/alignment.nex`; local copy in
+  `source/Fishbein_2001.alignment.nex`, NCHAR=9237.
+- **Genes:** atpB, 18S, rbcL, matK, 26S. Their five CHARSETs span 9,005 of the 9,237 columns, which
+  is the figure Table 1 of Lanfear et al. (2012) reports; only those columns are kept.
 - NEXUS uses `GAP=':'`, `MISSING='N'`.
 
 ### hummingbirds — 164 taxa × 3,821 sites, 11 charsets

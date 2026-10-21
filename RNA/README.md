@@ -8,8 +8,9 @@ built here. Read it before reusing anything.
 
 ```
 alignments/
-  pf/         hummingbirds, saxifragales and barkbeetles from the PartitionFinder benchmark
-              set, plus midges from its original TreeBASE submission, with the authors' charsets
+  pf/         the four multi-locus datasets benchmarked by Lanfear et al. (2012):
+              barkbeetles and saxifragales from the alignment set distributed with
+              PartitionFinder, hummingbirds and midges from TreeBASE (M3354, M5116)
   mito/       33-taxon grasshopper mitogenome, 37 loci (Leavitt et al. 2013 accessions)
 source/       original NEXUS files for the PartitionFinder datasets, as deposited
 scripts/      dataset preparation; scripts/pipeline/ holds the benchmark runner
